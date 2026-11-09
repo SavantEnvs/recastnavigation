@@ -1,0 +1,7 @@
+# fuzz_path_corridor target for the mined bug fixed by upstream 599fd0f (dtMergeCorridorStartMoved).
+project: savantenvs/recastnavigation
+target: fuzz_path_corridor-mined-b2d8fa9
+cmds:
+  - cmd: /mayhem/fuzz_path_corridor
+    libfuzzer: true
+    timeout: 10
