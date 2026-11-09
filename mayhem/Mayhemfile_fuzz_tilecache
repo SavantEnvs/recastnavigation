@@ -1,0 +1,9 @@
+project: savantenvs/recastnavigation
+target: fuzz_tilecache
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_tilecache/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_tilecache
+    libfuzzer: true
+    timeout: 10

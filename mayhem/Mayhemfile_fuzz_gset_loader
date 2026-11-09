@@ -1,0 +1,10 @@
+project: savantenvs/recastnavigation
+target: fuzz_gset_loader
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_gset_loader/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_gset_loader
+    libfuzzer: true
+    timeout: 10
+    dictionary: /mayhem/mayhem/fuzz_gset_loader/fuzz_gset_loader.dict
